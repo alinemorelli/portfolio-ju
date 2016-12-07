@@ -15,3 +15,13 @@
 </head>
 <?php wp_head(); ?>
 <body <?php body_class(); ?>>
+	<div class="main">
+		<header>
+			<ul class="brand">
+				<li><?php bloginfo('name'); ?></li>
+				<li><?php bloginfo('description'); ?></li>
+			</ul>
+			<navbar>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			</navbar>
+		</header>

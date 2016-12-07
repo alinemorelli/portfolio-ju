@@ -1,4 +1,5 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";
+/*!
 Theme Name: Portfólio Juliana
 Theme URI: https://codethemachine.com.br
 Author: Code the Machine team
@@ -10,4 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portfolio
 Text Domain: portfoliojuliana
 
+<<<<<<< HEAD
 */
+=======
+*/@font-face{font-family:Raleway;font-style:normal;font-weight:200;src:local("Raleway"),url(fonts/raleway-extralight-webfont.woff) format(woff),url(fonts/raleway-extralight-webfont.woff2)}@font-face{font-family:Raleway;font-style:normal;font-weight:300;src:local("Raleway"),url(fonts/raleway-light-webfont.woff) format(woff),url(fonts/raleway-light-webfont.woff2)}@font-face{font-family:Raleway;font-style:normal;font-weight:500;src:local("Raleway"),url(fonts/raleway-medium-webfont.woff) format(woff),url(fonts/raleway-medium-webfont.woff2)}*{margin:0;padding:0;font-size:14px}ul li{list-style:none}body{font-family:Raleway,sans-serif;font-weight:300}.main{width:91%;margin:0 auto}header{display:flex;justify-content:space-between}header .brand li,header .menu li{display:inline}
+>>>>>>> 87270fc144b92f3cde2c1c831df52d9563e159af
