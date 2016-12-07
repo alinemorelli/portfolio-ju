@@ -37,17 +37,14 @@ get_header(); ?>
 			<?php if ($posts_query->have_posts()): ?>
 
     			<?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
-    				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-					<img src="<?php echo $image[0]; ?>"> 
+    				<div id="post-<?php echo get_the_ID(); ?>" class="middle-container--posts_image">
+	    				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+						<img src="<?php echo $image[0]; ?>"> 
+					</div>
     			<?php endwhile; ?>
 
 			<?php endif; ?>
 	   	<?php wp_reset_postdata(); ?>
-
-
-
-
-
 
 	</div>
 
