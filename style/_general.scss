@@ -1,3 +1,5 @@
+$darkGray: #2e2e2e;
+
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
@@ -6,16 +8,4 @@ body {
 .main {
     width: 91%;
     margin: 0 auto;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-
-    .brand,
-    .menu {
-        li {
-            display: inline;            
-        }
-    }
 }
