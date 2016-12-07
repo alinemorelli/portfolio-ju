@@ -11,3 +11,8 @@ function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+/** 
+  * Register CSS
+  */
+wp_enqueue_style( 'style', get_stylesheet_uri() );
