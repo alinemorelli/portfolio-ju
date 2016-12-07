@@ -7,21 +7,26 @@
  * hooks in WordPress to change core functionality.
  *
  */
+
+/**** Registrar menu principal ****/
+
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
 
-/** 
-  * Register CSS
-  */
+/**** Registrar CSS ****/
+
 wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-/**
-  * Scripts register
-  */
+/**** Registrar scripts ****/
 
 function my_scripts_loader() {
 wp_enqueue_script( 'my-js', '/wp-content/themes/portfoliojuliana/script/main.js', false );
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts_loader' );
+
+/**** Ativar imagem destacada ****/
+
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 120, 120 );

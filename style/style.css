@@ -82,7 +82,7 @@ header {
       left: 0;
       bottom: 0;
       z-index: -1;
-      transition: all .5s; }
+      transition: all .4s; }
     header nav a:hover {
       color: #ffffff; }
       header nav a:hover::after {
