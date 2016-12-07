@@ -7,8 +7,50 @@
  *
  */
 
- get_header(); ?>
+get_header(); ?>
+<div class="top-container">
 
-<h1>Content Test</h1>
+	<?php $the_query = new WP_Query( 'page_id=4' ); ?>
+
+	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+		<div class="top-container--image">
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+			<img src="<?php echo $image[0]; ?>"> 
+		</div>
+		<div class="top-container--text">
+			<h2> <?php echo the_field("titulo_imagem"); ?> </h2>
+			<p> <?php echo the_field("desc_image"); ?>  </p>
+		</div>
+
+	<?php endwhile;?> <!-- End home page query-->
+
+</div>
+<div class="middle-container">
+
+	<h2> <?php echo the_field("sobre_cases"); ?> </h2>
+	<p> <?php the_content(); ?></p>
+
+	<div class="middle-container--posts">
+
+		<?php $args = array('posts_per_page' => 3, 'cat' => '2', );
+		$posts_query = new WP_Query( $args); ?>
+			<?php if ($posts_query->have_posts()): ?>
+
+    			<?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
+    				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+					<img src="<?php echo $image[0]; ?>"> 
+    			<?php endwhile; ?>
+
+			<?php endif; ?>
+	   	<?php wp_reset_postdata(); ?>
+
+
+
+
+
+
+	</div>
+
+</div>
 
 <?php get_footer(); ?>
