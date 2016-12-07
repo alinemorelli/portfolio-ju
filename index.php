@@ -9,8 +9,8 @@
 
 get_header(); ?>
 <div class="top-container">
-
-	<?php $the_query = new WP_Query( 'page_id=4' ); ?>
+	<?php $page = get_page_by_title('Home'); ?>
+	<?php $the_query = new WP_Query($page); ?>
 
 	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 		<div class="top-container--image">
@@ -32,7 +32,7 @@ get_header(); ?>
 
 	<div class="middle-container--posts">
 
-		<?php $args = array('posts_per_page' => 3, 'cat' => '2', );
+		<?php $args = array('posts_per_page' => 3, 'cat' => 'projetos');
 		$posts_query = new WP_Query( $args); ?>
 			<?php if ($posts_query->have_posts()): ?>
 
