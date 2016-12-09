@@ -1,0 +1,62 @@
+#menu-mobile {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+
+    .brand,
+    .menu {
+        li {
+            display: inline;
+            text-transform: uppercase;
+            letter-spacing: 1px;            
+        }
+    }
+
+    .brand {
+        li {
+            &:first-child {
+                padding-right: 10px;
+                border-right: 1px solid $darkGray;
+            }
+
+            &:last-child {
+                padding-left: 10px;                
+                font-size: 12px;
+            }
+        }
+    }
+
+    nav {
+        a {
+            font-size: 12px;
+            padding: 2.5px 25px;
+            position: relative;
+            transition: all .5s;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 0;
+                background: $yellow;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: all .5s;
+            }
+
+            &:hover {
+                color: $white;
+                &::after {
+                    content: '';
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
