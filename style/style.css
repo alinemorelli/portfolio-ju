@@ -32,7 +32,8 @@ Text Domain: portfoliojuliana
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #2e2e2e; }
 
 .main {
   width: 91%;
@@ -43,7 +44,6 @@ body {
   padding: 0;
   font-size: 14px;
   text-decoration: none;
-  color: #2e2e2e;
   outline: none; }
 
 ul li {
@@ -82,7 +82,7 @@ header {
       left: 0;
       bottom: 0;
       z-index: -1;
-      transition: all .4s; }
+      transition: all .5s; }
     header nav a:hover {
       color: #ffffff; }
       header nav a:hover::after {
@@ -155,3 +155,26 @@ header {
     header .menu li {
       display: block;
       margin: 50px 0; } }
+
+.top-container {
+  position: relative; }
+  .top-container img {
+    width: 100%; }
+  .top-container--text {
+    position: absolute;
+    right: 1%;
+    bottom: -10%;
+    width: 49%;
+    min-height: 40%;
+    margin-top: -30px;
+    padding: 3%;
+    background: #f8d220;
+    box-sizing: border-box; }
+    .top-container--text h2 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+    .top-container--text p {
+      margin: 5% 0; }

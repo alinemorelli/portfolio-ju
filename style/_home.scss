@@ -1,5 +1,30 @@
 .top-container {
+    position: relative;
     img {
         width: 100%;
+    }
+
+    &--text {
+        position: absolute;
+        right: 1%;
+        bottom: -10%;
+        width: 49%;
+        min-height: 40%;
+        margin-top: -30px;
+        padding: 3%;
+        background: $yellow;
+        box-sizing: border-box;
+    
+        h2 {
+            color: $white;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 5% 0;
+        }
     }
 }

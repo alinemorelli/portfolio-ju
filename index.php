@@ -10,7 +10,7 @@
 get_header(); ?>
 <div class="top-container">
 	<?php $page = get_page_by_title('Home'); ?>
-	<?php $the_query = new WP_Query($page); ?>
+	<?php $the_query = new WP_Query('page_id=34'); ?>
 
 	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 		<div class="top-container--image">
@@ -21,15 +21,13 @@ get_header(); ?>
 			<h2> <?php echo the_field("titulo_imagem"); ?> </h2>
 			<p> <?php echo the_field("desc_image"); ?>  </p>
 		</div>
-
+		<div class="top-container--case">
+			<h2> <?php echo the_field("sobre_cases"); ?> </h2>
+			<p> <?php the_content(); ?></p>
+		</div>
 	<?php endwhile;?> <!-- End home page query-->
-
 </div>
 <div class="middle-container">
-
-	<h2> <?php echo the_field("sobre_cases"); ?> </h2>
-	<p> <?php the_content(); ?></p>
-
 	<div class="middle-container--posts">
 
 		<?php $args = array('posts_per_page' => 3, 'cat' => 'projetos');
