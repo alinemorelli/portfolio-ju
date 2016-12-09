@@ -9,7 +9,8 @@
 
 get_header(); ?>
 <div class="top-container">
-	<?php $the_query = new WP_Query('page_id=34'); ?>
+	<?php $pageid = get_page_by_title('home'); ?>
+	<?php $the_query = new WP_Query('page_id=' . $pageid->ID); ?>
 
 	<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 		<div class="top-container--image">
