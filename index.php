@@ -18,12 +18,14 @@ get_header(); ?>
 			<img src="<?php echo $image[0]; ?>"> 
 		</div>
 		<div class="top-container--text">
-			<h2> <?php echo the_field("titulo_imagem"); ?> </h2>
+			<h2 class="title"> <?php echo the_field("titulo_imagem"); ?> </h2>
 			<p> <?php echo the_field("desc_image"); ?>  </p>
 		</div>
 		<div class="top-container--case">
-			<h2> <?php echo the_field("sobre_cases"); ?> </h2>
-			<p> <?php the_content(); ?></p>
+			<h2 class="title"> <?php echo the_field("sobre_cases"); ?> </h2>
+			<div class="cases-column">
+				<p> <?php the_content(); ?></p>
+			</div>
 		</div>
 	<?php endwhile;?> <!-- End home page query-->
 </div>
@@ -37,7 +39,9 @@ get_header(); ?>
     			<?php while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
     				<div id="post-<?php echo get_the_ID(); ?>" class="middle-container--posts_image">
 	    				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-						<img src="<?php echo $image[0]; ?>"> 
+						<a href="<?php echo the_permalink(); ?>">
+							<img src="<?php echo $image[0]; ?>"> 						
+						</a>
 					</div>
     			<?php endwhile; ?>
 
