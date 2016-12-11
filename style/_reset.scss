@@ -3,8 +3,11 @@
     padding: 0;
     font-size: 14px;
     text-decoration: none;
-    color: $darkGray;
     outline: none;
+}
+
+a {
+    color: $darkGray;
 }
 
 ul li {
