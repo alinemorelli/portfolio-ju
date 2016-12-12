@@ -7,6 +7,14 @@
  */
 ?>
  <?php wp_footer(); ?>
+ <footer>
+ 	<p>
+ 		Juliana Bezerra | <span> Redação </span>
+ 	</p>
+ 	<p>
+ 		Todos os direitos reservados | <span> 2016 </span>
+ 	</p>
+ </footer>
  </div><!-- div.main -->
 </body>
 </html>
