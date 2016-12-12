@@ -10,7 +10,7 @@ window.onload = function () {
 if (window.innerWidth > 480) {
     window.onscroll = function () {
         let header = document.querySelector('header');
-        if (document.documentElement.scrollTop > 5) {
+        if (window.pageYOffset > 5 || document.documentElement.scrollTop > 5) {
             header.style.height = "60px";
         } else {
             header.style.height = "90px";
