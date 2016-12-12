@@ -16,17 +16,19 @@
 <?php wp_head(); ?>
 <body <?php body_class(); ?>>
 	<div class="main">
-		<header>
-			<button id="menu-mobile">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-			<ul class="brand">
-				<li><?php bloginfo('name'); ?></li>
-				<li><?php bloginfo('description'); ?></li>
-			</ul>
-			<nav id="top-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-			</nav>
-		</header>
+		<div class="header-container">
+			<header>
+				<button id="menu-mobile">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="brand">
+					<li><?php bloginfo('name'); ?></li>
+					<li><?php bloginfo('description'); ?></li>
+				</ul>
+				<nav id="top-menu">
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+				</nav>
+			</header>
+		</div>

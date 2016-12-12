@@ -1,13 +1,21 @@
 #menu-mobile {
     display: none;
 }
-
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 110px;
+}
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 110px;
-
+    position: fixed;
+    width: 91%;
+    z-index: 1;
+    background: #fff; 
+    transition: 0.4s;
     .brand,
     .menu {
         li {

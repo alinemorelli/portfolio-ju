@@ -79,6 +79,7 @@
             padding: 1vh 0;
             background: $white;
             transition: left .5s;
+            z-index: 1;
 
             &.active {
                 left: 0;
