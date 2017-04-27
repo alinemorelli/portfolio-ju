@@ -1,3 +1,5 @@
 node_modules/
 git_rsa
 git_rsa.pub
+style.css
+style/style.css
