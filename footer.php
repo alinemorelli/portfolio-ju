@@ -9,10 +9,10 @@
  <?php wp_footer(); ?>
  <footer>
  	<p>
- 		Juliana Bezerra | <span> Redação </span>
+ 		Juliana Bezerra | <span> Identidade verbal </span>
  	</p>
  	<p>
- 		Todos os direitos reservados | <span> 2016 </span>
+ 		Todos os direitos reservados | <span> 2017 </span>
  	</p>
  </footer>
  </div><!-- div.main -->

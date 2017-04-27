@@ -15,7 +15,7 @@
         background: $yellow;
         color: $white;
         box-sizing: border-box;
-    
+
         h2 {
             color: $white;
         }
@@ -37,6 +37,9 @@
         padding: 0 10px;
 
         .cases-column {
+            -webkit-column-gap: 25px;
+            -moz-column-gap: 25px;
+            column-gap: 25px;
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
@@ -94,7 +97,7 @@
 
             &:hover {
                 img {
-                    opacity: .7;                    
+                    opacity: .7;
                 }
                 a {
                     &::after {
